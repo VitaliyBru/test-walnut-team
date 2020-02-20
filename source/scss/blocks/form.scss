@@ -1,0 +1,270 @@
+.form {
+  text-align: center;
+}
+
+.form__text {
+  @include font(18px, 24px, 400);
+
+  margin: 23px 0;
+  text-align: center;
+  color: $white;
+}
+
+.form__group {
+  text-align: center;
+
+  & input {
+    @include font(18px, 64px, 600);
+
+    margin: 0 13px;
+    width: 410px;
+    height: 64px;
+    padding:  0 0 0 30px;
+    border: none;
+    border-radius: 12px;
+    color: $white-30;
+    background-color: $white-25;
+    outline: none;
+    transition: background-color, color;
+    transition-duration: $transition-time;
+
+    &::placeholder {
+      color: $white-30;
+    }
+
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: $white-40;
+    }
+
+    &:focus {
+      box-shadow: 0 0 12px $blue-70;
+    }
+  }
+}
+
+.form__agreement {
+  @include font(13px, 24px, 400);
+
+  margin: 22px 0;
+  color: $white;
+  letter-spacing: -0.55px;
+  text-align: center;
+}
+
+.form__checkbox {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  margin: 0 12px 0 0;
+  width: 24px;
+  height: 24px;
+  background-color: $white;
+  border-radius: 6px;
+  vertical-align: bottom;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+input:checked + .form__checkbox::before,
+.form__checkbox:active::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  background-color: $blue;
+}
+
+input:checked + .form__checkbox:active::before {
+  background-color: $white;
+}
+
+input:invalid {
+  box-shadow: inset 0 0 0 2px $red-25;
+}
+
+input:invalid ~ .form__checkbox {
+  box-shadow: inset 0 0 1px 2px $red-60;
+}
+
+input:invalid:hover {
+  box-shadow: inset 0 0 0 2px $red-40;
+}
+
+input:invalid:focus {
+  box-shadow: inset 0 0 0 2px $red-40,
+      0 0 12px $blue-70;
+}
+
+.form__link {
+  position: relative;
+  color: $blue;
+
+  &:hover {
+    color: $yellow;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    border-bottom: 1px solid $blue;
+  }
+
+  &:hover::before {
+    border-bottom-color: $yellow;
+  }
+}
+
+.form__submit {
+  @include font(19px, 24px, 600);
+
+  display: inline-block;
+  margin: 28px 0;
+  min-width: 410px;
+  padding: 23px 20px;
+  color: $white;
+  background-color: $blue;
+  border-radius: 12px;
+  border: none;
+  letter-spacing: -0.6px;
+  cursor: pointer;
+  transition: background-color, color;
+  transition-duration: $transition-time;
+
+  &:hover {
+    color: $black;
+    background-color: $yellow;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+@include adaptive-point($desktop-width - 1) {
+  .form__text {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .form__group {
+    margin: 0 -15px;
+
+    input {
+      font-size: 16px;
+      line-height: 45px;
+      margin: 0 13px;
+      padding-top: 2px;
+      width: 330px;
+      height: 47px;
+      border-radius: 10px;
+    }
+  }
+
+  .form__agreement {
+    font-size: 11px;
+    letter-spacing: -0.06px;
+  }
+
+  .form__checkbox {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+  }
+
+  input:checked + .form__checkbox::before,
+  .form__checkbox:active::before {
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+  }
+
+  .form__submit {
+    margin: 6px 0;
+    min-width: 330px;
+    padding: 16px 20px;
+    border-radius: 10px;
+  }
+}
+
+@include adaptive-point($tablet-width - 1) {
+  .form__text {
+    line-height: 25px;
+  }
+
+  .form__group {
+    input {
+      margin: 0 13px 20px;
+      width: 290px;
+    }
+  }
+
+  .form__agreement {
+    margin: 4px 0 18px 32px;
+    letter-spacing: -0.41px;
+    line-height: 14px;
+    text-align: left;
+  }
+
+  .form__checkbox {
+    margin: 0 10px 0 -33px;
+  }
+
+  .form__submit {
+    min-width: 290px;
+    font-size: 16px;
+    letter-spacing: 0.10px;
+
+    &:hover {
+      color: $white;
+      background-color: $blue;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

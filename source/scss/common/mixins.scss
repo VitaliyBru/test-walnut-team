@@ -1,0 +1,18 @@
+@mixin font ($font-size, $line-height, $font-weight: 400) {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin adaptive-point ($max-width) {
+  @media (max-width: $max-width) {
+    @content;
+  }
+}

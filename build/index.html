@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="fonts/Montserrat-ExtraBold.woff2" crossorigin="anonymous" as="font">
+  <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" crossorigin="anonymous" as="font">
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" crossorigin="anonymous" as="font">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link href="css/style.min.css" type="text/css" rel="stylesheet">
+  <title>Snow Alp</title>
+</head>
+<body>
+  <header class="header js-header">
+    <div class="wrapper">
+      <nav class="header__menu js-menu">
+        <div class="header__logo-container">
+          <a class="header__home-link">
+            <img src="img/logo.svg" width="163" height="40" alt="логотип snow-alp">
+          </a>
+          <span class="header__logo-text">Чистка снега и наледи с кровли</span>
+        </div>
+        <div class="header__sandwich js-side-drop">
+          <button type="button" class="header__menu-control js-menu-control">
+            <span class="visually-hidden">Меню</span>
+          </button>
+          <button type="button" class="close-btn header__close-btn js-menu-close">
+            <span class="visually-hidden">Закрыть меню</span>
+          </button>
+          <div class="header__dropdown">
+            <ul class="header__list">
+              <li class="header__item"><a class="header__link" href="#">Цены</a></li>
+              <li class="header__item"><a class="header__link" href="#">Преимущества</a></li>
+              <li class="header__item"><a class="header__link" href="#">Отзывы</a></li>
+              <li class="header__item"><a class="header__link" href="#">Контакты</a></li>
+            </ul>
+            <div class="header__info js-external">
+              <p class="header__segment-info">
+                Снег и лёд могут появиться неожиданно, <b>поэтому&nbsp;мы&nbsp;работаем&nbsp;24/7</b>
+              </p>
+              <p class="header__segment-info">
+                Мы открыты для предложений и идей&nbsp;&#8288;&mdash;&#8288;&nbsp;<a href="mailto:hello@snow-alp.ru">hello@snow&#8288;-&#8288;alp.ru</a>
+              </p>
+              <p class="header__segment-info  header__segment-info--callback">
+                Мы легко можем перезвонить сами&nbsp;&#8288;&mdash;&#8288;&nbsp;<a class="js-callback" href="#">обратный&nbsp;звонок</a>
+              </p>
+            </div>
+            <!-- https://api.whatsapp.com/send?phone= -->
+            <a href="#" class="whats-app header__whats-app">
+              Написать в <span class="whats-app__icon"></span> WhatsApp
+            </a>
+          </div>
+        </div>
+        <div class="header__phone">
+          <a href="tel:+74953355353" class="header__phone-link">+7 495 <span class="header__local-phone">335 53 53</span></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <h1 class="visually-hidden">Snow Alp – очистка снега с крыш промышленными альпинистами</h1>
+    <section class="order">
+      <div class="wrapper">
+        <p class="order__text">
+          <span class="order__bold">очистка снега с крыш</span>
+          промышленными альпинистами от&nbsp;25&nbsp;руб&#8288;/&#8288;м&#8288;<span class="order__sup">2</span>
+        </p>
+        <form class="form order__form" name="order" action="" novalidate>
+          <p class="form__text">
+            Оставьте заявку &mdash; в течение часа к вам выедет специалист
+          </p>
+          <div class="form__group">
+            <label>
+              <span class="visually-hidden">Ваше имя</span>
+              <input name="person" type="text" placeholder="имя фамилия" minlength="3">
+            </label>
+            <label>
+              <span class="visually-hidden">Ваш контактный телефон</span>
+              <input name="phone" type="tel" placeholder="+7 (___) ___-__-__">
+            </label>
+          </div>
+          <div class="form__agreement">
+            <input id="agreement" type="checkbox" name="agreement" value="Согласен" class="visually-hidden" checked>
+            <label class="form__checkbox" for="agreement"></label>
+            <span>Я согласен с</span>
+            <a class="form__link" href="#">политикой конфиденциальности</a>
+            <span>и даю согласие на обработку персональных данных</span>
+          </div>
+          <button class="form__submit" type="submit">Отправить заявку</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer></footer>
+
+  <section class="popup js-popup">
+    <div class="callback popup__callback js-form-modal">
+      <button type="button" class="close-btn callback__close-btn js-close-btn">
+        <span class="visually-hidden">Закрыть попап</span>
+      </button>
+      <p class="callback__title">
+        Заявка на обратный звонок
+      </p>
+      <p class="callback__text">
+        Оставьте заявку и мы перезвоним вам в течение 15 минут
+      </p>
+      <form class="callback__form" name="call" action="" novalidate>
+        <div class="callback__group">
+          <label>
+            <span class="visually-hidden">Ваше имя</span>
+            <input name="person" type="text" placeholder="имя фамилия" minlength="3">
+          </label>
+          <label>
+            <span class="visually-hidden">Ваш контактный телефон</span>
+            <input name="phone" type="tel" placeholder="+7 (___) ___-__-__">
+          </label>
+        </div>
+        <div class="callback__agreement">
+          <input id="agreement-modal" type="checkbox" name="agreement" value="Согласен" class="visually-hidden" checked>
+          <label class="callback__checkbox" for="agreement-modal"></label>
+          <span>Я согласен с</span>
+          <a class="callback__link" href="#">политикой&nbsp;конфиденциальности</a>
+          <span>и даю согласие на обработку персональных данных</span>
+        </div>
+        <button class="callback__submit" type="submit">Отправить заявку</button>
+        <p class="callback__error-massage js-error-msg">
+          Вы не заполнили необходимые поля.<br>
+          Заполните недостающие данные для отправки заявки
+        </p>
+      </form>
+    </div>
+
+    <div class="success popup__success js-success">
+      <p class="success__text">Заявка успешно отправленна!</p>
+      <p class="success__text success__text--small">Спасибо за оставленную заявку, менеджер свяжется с вами в течение 15 минут</p>
+      <button type="button" class="close-btn success__close-btn js-close-btn">
+        <span class="visually-hidden">Закрыть попап</span>
+      </button>
+    </div>
+  </section>
+
+  <script src="js/app.bundle.js"></script>
+</body>
+</html>

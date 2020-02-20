@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  @include font(18px, 24px, 400);
+  min-width: 320px;
+  min-height: 130vh; // Добавлено для демонстрации поведения хедера в тестовом задании.
+  background-color: #ffffff;
+}
+
+main {
+  display: block;
+  width: 100%;
+}
+
+input[type=text],
+input[type=tel]{
+  appearance: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  white-space: nowrap;
+
+  border: 0;
+  clip-path: inset(100%);
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 35px;
+  max-width: 1360px;
+
+  @include adaptive-point($desktop-width - 1) {
+    padding: 0 39px;
+  }
+
+  @include adaptive-point($tablet-width - 1) {
+    padding: 0 15px;
+  }
+}
+
+.js-visible {
+  display: block !important;
+}
+
+.js-stop-scroll {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}

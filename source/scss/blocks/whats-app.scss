@@ -1,0 +1,18 @@
+.whats-app {
+  @include font(14px, 24px, 600);
+
+  display: inline-block;
+  color: $white;
+  background-color: $black-btn;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.whats-app__icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/svg/whatsapp.svg");
+  background-size: contain;
+  vertical-align: middle;
+}

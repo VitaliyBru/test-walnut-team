@@ -1,0 +1,99 @@
+.order {
+  min-height: 800px;
+  padding-top: 210px;
+  background: center / cover no-repeat url("../img/bg-hero.jpg");
+  background-color: $bg-color;
+}
+
+.order__text {
+  @include font(40px, 40px, 600);
+
+  margin: 0;
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.order__form {
+  margin: 76px 0 0 0;
+}
+
+.order__sup {
+  font-size: 23px;
+  line-height: 18px;
+  vertical-align: super;
+}
+
+.order__bold {
+  @include font(64px, 90px, 800);
+
+  display: inline-block;
+  width: 100%;
+  color: $yellow;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@include adaptive-point($desktop-width - 1) {
+  .order {
+    padding-top: 109px;
+    min-height: 475px;
+    background-image: url("../img/bg-hero-768.jpg");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/bg-hero-768@2x.jpg");
+    }
+  }
+
+  .order__text {
+    font-size: 21px;
+    line-height: 30px;
+  }
+
+  .order__bold {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .order__sup {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .order__form {
+    margin: 23px 0 0 0;
+  }
+}
+
+@include adaptive-point($tablet-width - 1) {
+  .order {
+    padding-top: 157px;
+    min-height: 776px;
+    background-position-x: 38.5%;
+    background-image: url("../img/bg-hero-320.jpg");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/bg-hero-320@2x.jpg");
+    }
+  }
+
+  .order__form {
+    margin: 38px 0 0 0;
+  }
+
+  .order__text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .order__bold {
+    font-size: 30px;
+    line-height: 36px;
+    margin: 0 0 10px;
+  }
+
+  .order__sup {
+    font-size: 10px;
+    line-height: 14px;
+  }
+}

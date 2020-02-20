@@ -1,0 +1,28 @@
+.success {
+  padding: 55px 0 115px 0;
+  min-height: 320px;
+  background: bottom 55px center / 63px 47px no-repeat url("../img/shape-ok.png"), $blue;
+  border-radius: 16px;
+}
+
+.success__text {
+  @include font(30px, 36px, 600);
+
+  color: $white;
+  margin: 0 auto;
+  max-width: 280px;
+  text-align: center;
+
+  &--small {
+    @include font(18px, 24px, 400);
+
+    margin: 22px auto 0;
+    max-width: 420px;
+  }
+}
+
+.success__close-btn {
+  position: absolute;
+  top: 65px;
+  right: 40px;
+}
