@@ -52,11 +52,17 @@ export class FormController {
   }
 
   _sendForm() {
+    // три последующих строки добавленны для имитации работы. Для полного функционирования необходимо их удалить и
+    // раскоментировать анологичные в секции «then» (будет работать только, если в атрибуте action в форме прописан адрес реального сервера)
+    PopupController.openPopupBackLayer();
+    PopupController.openSuccess();
+    this._formReset();
+
     axios.post(this.formEl.action, new FormData(this.formEl), {timeout: 1000})
       .then((Promise) => {
-        PopupController.openPopupBackLayer();
-        PopupController.openSuccess();
-        this._formReset();
+        // PopupController.openPopupBackLayer();
+        // PopupController.openSuccess();
+        // this._formReset();
       })
       .catch((err) => {
         console.log(`при отправке формы "${this.formEl.name}" возникла ошибка ${err}`);
