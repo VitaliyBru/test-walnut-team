@@ -18,6 +18,8 @@ export class FormController {
   init () {
     if (this.formEl) {
       this.formEl.addEventListener(`submit`, this._onSubmit);
+    } else {
+      console.log(`Форма не найдена, проверте правильность заполнения атрибута формы name`);
     }
   }
 
