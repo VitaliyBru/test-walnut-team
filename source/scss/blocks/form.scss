@@ -201,6 +201,11 @@ input:invalid:focus {
     min-width: 330px;
     padding: 16px 20px;
     border-radius: 10px;
+
+    &:hover {
+      color: $white;
+      background-color: $blue;
+    }
   }
 }
 
@@ -231,11 +236,6 @@ input:invalid:focus {
     min-width: 290px;
     font-size: 16px;
     letter-spacing: 0.10px;
-
-    &:hover {
-      color: $white;
-      background-color: $blue;
-    }
   }
 }
 
