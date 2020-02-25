@@ -23,7 +23,8 @@ const callbackForm = new FormController({
   phoneInputName: `phone`
 });
 
-const onCallbackClick = () => {
+const onCallbackClick = (evt) => {
+  evt.preventDefault();
   PopupController.openPopupBackLayer();
   PopupController.openForm(callbackForm.cancel());
   callbackForm.init();
