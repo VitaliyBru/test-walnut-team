@@ -26,3 +26,10 @@
   top: 65px;
   right: 40px;
 }
+
+@include adaptive-point($tablet-width - 1) {
+  .success__close-btn {
+    top: 27px;
+    right: 27px;
+  }
+}
