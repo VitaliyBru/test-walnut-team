@@ -65,7 +65,7 @@
 .header__sandwich {
   margin: 0 0 0 2.6vw;
   flex-shrink: 0;
-  max-width: calc(100% - 630px);
+  width: calc(100% - 630px);
 }
 
 .header__menu-control {
@@ -100,19 +100,21 @@
 .js-sticky .header__list {
   margin: -5px -3.3vw 0 2.7vw;
   padding: 0;
+  width: 55.6%
 }
 
 .header__item {
-  margin: 0 4.4vw 0 0;
+  margin: 0 auto 0 0;
 }
 
 .js-sticky .header__item {
-  margin: 0 3.3vw 4px 0;
+  margin: 0 auto 4px 0;
 }
 
 .header__link {
   @include font(16px, 20px, 600);
 
+  margin-right: 20px;
   color: $white;
   transition: color;
   transition-duration: $transition-time;
@@ -242,18 +244,6 @@
   line-height: 34px;
 }
 
-//@include adaptive-point(1295px) {
-//  .js-sticky {
-//    .header__list {
-//      width: 60%;
-//    }
-//
-//    .header__info {
-//      width: 25%;
-//    }
-//  }
-//}
-
 @include adaptive-point($desktop-width - 1) {
   .header {
     top: 0;
@@ -336,6 +326,10 @@
   .header__item {
     margin: 0;
     padding: 10px 0;
+  }
+
+  .header__link {
+    margin: 0;
   }
 
   .header__info {
