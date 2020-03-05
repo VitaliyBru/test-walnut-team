@@ -177,11 +177,13 @@ input:invalid:focus {
   }
 
   .form__agreement {
+    margin: 24px 0 20px;
     font-size: 11px;
     letter-spacing: -0.06px;
   }
 
   .form__checkbox {
+    top: -2px;
     width: 20px;
     height: 20px;
     border-radius: 5px;
@@ -222,14 +224,17 @@ input:invalid:focus {
   }
 
   .form__agreement {
-    margin: 4px 0 18px 32px;
+    margin: 4px auto 18px;
+    padding: 0 0 0 32px;
     letter-spacing: -0.41px;
     line-height: 14px;
     text-align: left;
+    width: 289px;
   }
 
   .form__checkbox {
     margin: 0 10px 0 -33px;
+    top: 2px;
   }
 
   .form__submit {
